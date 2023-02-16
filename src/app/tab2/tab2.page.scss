@@ -1,3 +1,16 @@
-.fundo {
-  background-color: red;
+.botoes {
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.estiloBotoes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.acao {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  margin-bottom: 50px;
 }
