@@ -1,6 +1,38 @@
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://cdn.mundodastribos.com/2011/05/Como-Jogar-Baralho-1.jpg');
+  background-size: cover;
+  filter: opacity(80%);
+  filter: blur(30);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
 .botoes {
   padding: 5px;
   margin-bottom: 30px;
+}
+
+.esquerda {
+  width: 120px;
+  justify-content: start;
+  margin: 0 auto;
+}
+
+.direita {
+  width: 120px;
+  justify-content: end;
+  margin: 0 auto;
 }
 
 .estiloBotoes {
@@ -9,8 +41,15 @@
 }
 
 .acao {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
   margin-bottom: 50px;
 }
+
+.informacao {
+  margin: 0 auto;
+  text-align: center;
+}
+
