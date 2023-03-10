@@ -12,11 +12,14 @@
     <div class="botoes">
       <ion-grid>
         <ion-row class="estiloBotoes">
-          <ion-button color="dark" size="large">+1</ion-button>
-          <ion-button color="dark"size="large">+3</ion-button>
-          <ion-button color="dark" size="large">+6</ion-button>
-          <ion-button color="dark" size="large">+9</ion-button>
-          <ion-button color="dark" size="large">+12</ion-button>
+          <ion-button (click)="mudarPontos(1)"color="dark" size="large">+1</ion-button>
+          <ion-button (click)="mudarPontos(3)" color="dark" size="large">+3</ion-button>
+          <ion-button (click)="mudarPontos(6)" color="dark" size="large">+6</ion-button>
+          <ion-button (click)="mudarPontos(9)" color="dark" size="large">+9</ion-button>
+          <ion-button (click)="mudarPontos(12)"color="dark" size="large">+12</ion-button>
+        </ion-row>
+        <ion-row class="valendo">
+          <h2>Valendo: {{valendo}}</h2>
         </ion-row>
       </ion-grid>
     </div>
@@ -24,31 +27,32 @@
       <ion-grid>
         <div class="esquerda">
             <ion-col  size="6" size-md="4" size-lg="2"><h1 class="ion-text-center">NÓS</h1></ion-col>
-            <ion-col size="6" size-md="4" size-lg="2"><ion-button color="warning" expand="block" shape="round">+</ion-button></ion-col>
-            <ion-col size="6" size-md="4" size-lg="2"><h1 class="ion-text-center">0</h1></ion-col>
-            <ion-col size="6" size-md="4" size-lg="2"><ion-button color="warning" expand="block" shape="round">-</ion-button></ion-col>
+            <ion-col size="6" size-md="4" size-lg="2"><ion-button (click)="aumentarTento(1)" color="warning" expand="block" shape="round">+</ion-button></ion-col>
+            <ion-col size="6" size-md="4" size-lg="2"><h1 class="ion-text-center">{{tentosTime1}}</h1></ion-col>
+            <ion-col size="6" size-md="4" size-lg="2"><ion-button (click)="diminuirTento(1)" color="warning" expand="block" shape="round">-</ion-button></ion-col>
         </div>
       </ion-grid>
       <ion-grid>
         <div class="direita">
           <ion-col size="6" size-md="4" size-lg="2"><h1 class="ion-text-center">ELES </h1></ion-col>
           <ion-col>
-            <ion-col size="6" size-md="4" size-lg="2"><ion-button color="warning" expand="block" shape="round" >+</ion-button></ion-col>
-            <ion-col size="6" size-md="4" size-lg="2"><h1 class="ion-text-center">0</h1></ion-col>
-            <ion-col size="6" size-md="4" size-lg="2"><ion-button color="warning" expand="block" shape="round">-</ion-button></ion-col>
+            <ion-col size="6" size-md="4" size-lg="2"><ion-button (click)="aumentarTento(2)" color="warning" expand="block" shape="round" >+</ion-button></ion-col>
+            <ion-col size="6" size-md="4" size-lg="2"><h1 class="ion-text-center">{{tentosTime2}}</h1></ion-col>
+            <ion-col size="6" size-md="4" size-lg="2"><ion-button (click)="diminuirTento(2)" color="warning" expand="block" shape="round">-</ion-button></ion-col>
           </ion-col>
         </div>
       </ion-grid>
     </div>
     <div>
       <ion-item>
-        <ion-label>Vitórias NÓS = </ion-label>
-        <ion-input value="0" [readonly]="true"></ion-input>
+        <ion-label>Vitórias NÓS = {{pontosTime1}} </ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Vitórias ELES = </ion-label>
-        <ion-input value="0" [readonly]="true"></ion-input>
+        <ion-label>Vitórias ELES = {{pontosTime2}}</ion-label>
       </ion-item>
+      <div class="ion-text-center marginrecomecar">
+        <ion-button size="large" color="warning" (click)="recomecar()" class="ion-text-center">RESET</ion-button>
+      </div>
     </div>
   </div>
 

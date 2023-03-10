@@ -18,6 +18,16 @@
 
 }
 
+h1 {
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.247);
+}
+
+.valendo{
+  display: block;
+  text-align: center;
+
+}
 .botoes {
   padding: 5px;
   margin-bottom: 30px;
@@ -38,6 +48,7 @@
 .estiloBotoes {
   display: flex;
   justify-content: space-evenly;
+
 }
 
 .acao {
@@ -52,4 +63,7 @@
   margin: 0 auto;
   text-align: center;
 }
+.marginrecomecar{
+  margin-top: 10px;
 
+}
