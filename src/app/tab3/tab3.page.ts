@@ -1,38 +1,26 @@
 import { Component } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  styleUrls: ['tab3.page.scss'],
 })
 export class Tab3Page {
+  tamanho = 6;
+  valorAtual = 0;
+  imgsDado = ['assets/dice-red.png', 'assets/dice.gif'];
 
-  tamanho = 6
-  valorAtual = 0
-
-  imgDados = [
-    'assets/dice-red.png',
-    'assets/dice.gif'
-  ];
-
-  imgDado = this.imgDados[0];
+  imgDado = this.imgsDado[0];
 
   constructor() {}
 
   jogarDado() {
+    this.imgDado = this.imgsDado[1];
     this.valorAtual = 0;
-    this.valorAtual = Math.floor(Math.random());
-    this.valorAtual = this.valorAtual * 6;
-
-
-    this.imgDado = this.imgDados[1]
     setTimeout(() => {
-      this.imgDado
-    }, 950);
-
+      let valorTemp = Math.floor(Math.random() * this.tamanho) + 1;
+      this.valorAtual = valorTemp < this.tamanho ? valorTemp : this.tamanho;
+    }, 2500);
   }
-
-
-
-
 }
